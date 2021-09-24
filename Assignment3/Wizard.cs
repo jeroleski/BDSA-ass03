@@ -24,5 +24,19 @@ namespace BDSA2020.Assignment02
             using var reader = new CsvReader(csv, CultureInfo.InvariantCulture);
             return reader.GetRecords<Wizard>().ToList().AsReadOnly();
         });
+
+
+        public IEnumerable<string> getRowlingWizards(){
+            IEnumerable<string> r = Wizards.Value .Where(h => h.Creator.Contains("Rowling")).Select(h => h.Name);
+            return r;
+        } 
+
+        public int? getFirstYearDarth(){
+            Wizard w = Wizards.Value.Where(h => h.Name.Contains("Darth")).OrderBy(h => h.Year).First();
+            return w.Year;
+        } 
+        
+        
     }
+
 }
