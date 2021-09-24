@@ -35,6 +35,16 @@ namespace BDSA2020.Assignment02
             Wizard w = Wizards.Value.Where(h => h.Name.Contains("Darth")).OrderBy(h => h.Year).First();
             return w.Year;
         } 
+
+        public IEnumerable<(string,int?)> getHarryPotters(){
+            IEnumerable<(string,int?)> w = Wizards.Value.Where(h => h.Medium.Contains("Harry Potter")).Select(h => (h.Name, h.Year));
+            return w;
+        } 
+
+        public IEnumerable<string> getWizardNames(){
+            IEnumerable<string> w = Wizards.Value.GroupBy(h => h.Creator).OrderByDescending(h => h.Key).Thenby(h => h.Name).Select(h => h.Name);
+            return w;
+        } 
         
         
     }
