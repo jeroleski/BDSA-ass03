@@ -5,7 +5,7 @@ using CsvHelper;
 using System.Linq;
 using System.Globalization;
 
-namespace BDSA2020.Assignment02
+namespace BDSA2020.Assignment3
 {
     public class Wizard
     {
