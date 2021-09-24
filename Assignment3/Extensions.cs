@@ -1,6 +1,4 @@
 using System;
-using System.Linq;
-using System.Collections.Generic;
 
 namespace BDSA2020.Assignment3
 {
@@ -16,6 +14,10 @@ namespace BDSA2020.Assignment3
             {
                 return false;
             }
+        }
+        public static int WordCount(this string word)
+        {
+            return word.Split(" ").Length;
         }
     }
 }

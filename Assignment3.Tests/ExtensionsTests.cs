@@ -19,5 +19,21 @@ namespace BDSA2020.Assignment3.Tests
             Assert.False(output);
 
         }
+
+        [Fact]
+        public void WordCount_Given_HejMedDig_Return_3()
+        {
+            //Arrange
+            var input = "hej med dig";
+
+            var expected = 3;
+
+
+            //Act
+            var actual = input.WordCount();
+
+            //Assert
+            Assert.Equal(expected, actual);
+        }
     }
 }
