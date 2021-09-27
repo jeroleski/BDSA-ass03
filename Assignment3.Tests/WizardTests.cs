@@ -87,7 +87,7 @@ namespace BDSA2020.Assignment3.Tests
             Assert.Contains(("Harry Potter",1997),output);
             Assert.Equal(9,output.Count());
         }
-/*
+
         [Fact]
         public void Given_Wizards_Return_Names_Groupedby_Creator_ordered()
         {
@@ -111,7 +111,7 @@ namespace BDSA2020.Assignment3.Tests
             Assert.Equal("Darth D",output.ElementAt(10));
             Assert.Equal("Darth Vader",output.ElementAt(11));
             Assert.Equal(12,output.Count());
-        }*/
+        }
 
         [Fact]
         public void Given_Wizards_Return_Creator_Rowling_Linq()
@@ -170,7 +170,7 @@ namespace BDSA2020.Assignment3.Tests
             Assert.Contains(("Harry Potter",1997),output);
             Assert.Equal(9,output.Count());
         }
-/*
+
         [Fact]
         public void Given_Wizards_Return_Names_Groupedby_Creator_ordered_Linq()
         {
@@ -194,7 +194,7 @@ namespace BDSA2020.Assignment3.Tests
             Assert.Equal("Darth D",output.ElementAt(10));
             Assert.Equal("Darth Vader",output.ElementAt(11));
             Assert.Equal(12,output.Count());
-        }*/
+        }
     }
 }
 

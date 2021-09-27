@@ -27,18 +27,19 @@ namespace BDSA2020.Assignment3
                 yield return tuple;
             }
         } 
-    /*
+    
        public static IEnumerable<string> getWizardNames(this IEnumerable<Wizard> wizards){
             IEnumerable<string> w = wizards
-            .GroupBy(h => h.Creator)
-            .Select(group => group.OrderByDescending(h => h.Creator).ThenBy(h => h.Name))
-            .Select(h => h.Name);
+            .GroupBy(h => new {h.Creator, h.Name})
+            .OrderByDescending(h => h.Key.Creator)
+            .ThenBy(h => h.Key.Name)
+            .Select(h => h.Key.Name);
     
 
             foreach(string name in w){
                 yield return name;
             }
-        } */
+        } 
 
          public static IEnumerable<string> getRowlingWizardsLinq(IEnumerable<Wizard> wizards){
             IEnumerable<string> r =
@@ -71,18 +72,18 @@ namespace BDSA2020.Assignment3
                 yield return tuple;
             }
         } 
-/*
+
         public static IEnumerable<string> getWizardNamesLinq(IEnumerable<Wizard> wizards){
             IEnumerable<string> w =
             from wiz in wizards
-            group wiz by wiz.Creator into g
-            orderby g.Key descending,
-            g
-            select wiz.Name;
+            group wiz by (wiz.Creator,wiz.Name) into g
+            orderby g.Key.Creator descending,
+            g.Key.Name
+            select g.Key.Name;
             
             foreach(string name in w){
                 yield return name;
-            }*/
-
+            }
+        }
     }
 }
