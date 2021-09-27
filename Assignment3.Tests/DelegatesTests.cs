@@ -36,7 +36,6 @@ namespace BDSA2020.Assignment3.Tests
             var i = 42;
             var s = " 0042";
 
-            Delegates.InitiateNumberValidator();
             var validator = Delegates.numberValidator;
             var isValidated = validator(i, s);
 
@@ -49,7 +48,6 @@ namespace BDSA2020.Assignment3.Tests
             var i = 102;
             var s = "102";
 
-            Delegates.InitiateNumberValidator();
             var validator = Delegates.numberValidator;
             var isValidated = validator(i, s);
 
@@ -62,7 +60,6 @@ namespace BDSA2020.Assignment3.Tests
             var i = 69;
             var s = "guten tag";
 
-            Delegates.InitiateNumberValidator();
             var validator = Delegates.numberValidator;
             var isValidated = validator(i, s);
 
