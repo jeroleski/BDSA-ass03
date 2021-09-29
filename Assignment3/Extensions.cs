@@ -6,14 +6,8 @@ namespace BDSA2020.Assignment3
     {
         public static bool IsSecure(this Uri input)
         {
-            if(input.Scheme == Uri.UriSchemeHttps)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return input.Scheme == Uri.UriSchemeHttps
+            
         }
         public static int WordCount(this string word)
         {
